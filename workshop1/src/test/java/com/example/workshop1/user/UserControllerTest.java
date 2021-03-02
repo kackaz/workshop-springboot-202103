@@ -35,6 +35,8 @@ class UserControllerTest {
 
     assertEquals(1234, response.getCode());
     assertEquals("User not found id=15", response.getMessage());
+    ErrorResponse expected = new ErrorResponse(1234, "User not found id=15");
+    assertEquals(expected, response);
 
   }
 }
